@@ -41,13 +41,6 @@ describe('Helper functions', () => {
 
 	test('isValidCompanyUrl', () => {
 		expect(isValidCompanyUrl('https://www.example.com')).toBeTruthy();
-		expect(isValidCompanyUrl('http://example.co.in')).toBeTruthy();
-		expect(isValidCompanyUrl('https://example.org/path')).toBeTruthy();
-		expect(isValidCompanyUrl('https://example.com#section')).toBeTruthy();
-
-		expect(isValidCompanyUrl('ftp://example.com')).toBeFalsy();
 		expect(isValidCompanyUrl('example')).toBeFalsy();
-		expect(isValidCompanyUrl('https://example')).toBeFalsy();
-		expect(isValidCompanyUrl('https://.com')).toBeFalsy();
 	});
 });

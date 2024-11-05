@@ -1,4 +1,4 @@
-import {describe, it, expect, vi} from 'vitest'; // Ensure vi is imported
+import {describe, it, expect, vi} from 'vitest';
 import {render, fireEvent, screen, waitFor} from '@testing-library/react';
 import {AuthContext} from '../../contexts/AuthContext';
 import {UserContext} from '../../contexts/UserContext';

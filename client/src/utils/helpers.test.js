@@ -4,6 +4,7 @@ import {
 	isSQLInjectionAttempt,
 	isValidMessage,
 	formatDate,
+	isValidCompanyUrl,
 } from './helpers';
 
 describe('Helper functions', () => {
@@ -36,5 +37,10 @@ describe('Helper functions', () => {
 				year: 'numeric',
 			}),
 		);
+	});
+
+	test('isValidCompanyUrl', () => {
+		expect(isValidCompanyUrl('https://www.example.com')).toBeTruthy();
+		expect(isValidCompanyUrl('example')).toBeFalsy();
 	});
 });

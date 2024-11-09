@@ -17,6 +17,7 @@ if (process.env.NODE_ENV !== "test") {
 }
 
 const app = express();
+const routes = require("./routes/index");
 app.disable("x-powered-by");
 
 /*
@@ -29,6 +30,8 @@ app.use((req, res, next) => {
   });
   next();
 });
+
+app.use("/api/", routes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

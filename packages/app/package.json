@@ -4,7 +4,7 @@
   "repository": "https://github.com/TeamShiksha/logoexecutive.git",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "build": "echo 'Build not required for nodejs app'",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

@@ -1,9 +1,9 @@
-const ContactUsRepository = require('./ContactUsRepository');
+const ContactUsRepository = require('./ContactUs');
 
 class ContactUsService {
-  constructor() {
+  /* constructor() {
     this.contactUsRepository = new ContactUsRepository();
-  }
+  } */
 
   /**
    * Checks if a form exists in the database with the given email and active status.
@@ -12,7 +12,7 @@ class ContactUsService {
    */
   async formExists(email) {
     try {
-      const formQuery = await this.contactUsRepository.findByEmailAndStatus(email, true);
+      const formQuery = await ContactUsRepository.findByEmailAndStatus(email, true);
       return !!formQuery;
     } catch (error) {
       throw error;

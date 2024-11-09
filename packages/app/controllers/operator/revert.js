@@ -1,7 +1,7 @@
 const Joi = require("joi");
 const { STATUS_CODES } = require("http");
 const { isValidObjectId } = require("mongoose");
-const ContactUsService = require("../../services/ContactUsService");
+const ContactUsService = require("../../services/ContactUs");
 
 const revertToCustomerPayloadSchema = Joi.object().keys({
   id: Joi.string()

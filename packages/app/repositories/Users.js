@@ -12,6 +12,14 @@ class UsersRepository extends BaseRepository {
     super(User); 
   }
 
+  /**
+   * Finds a user by their email address.
+   * @param {string} email - The email address to search for.
+   * @returns {Promise<Object>} - The user document if found, otherwise null.
+   */
+  async findByEmail(email) {
+    return this.model.findOne({ email });
+  }
 }
 
 module.exports = UsersRepository;

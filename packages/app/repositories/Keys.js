@@ -1,4 +1,4 @@
-const BaseRepository = require("./base.repository");
+const BaseRepository = require("../repositories/base");
 const Keys = require("../models/Keys");
 
 /**

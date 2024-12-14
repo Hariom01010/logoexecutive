@@ -29,7 +29,7 @@ const getSearchQuerySchema = Joi.object({
 /**
  * Handles logo search requests using a company name prefix and API key.
  * Validates input, checks subscription limits, fetches matching companies and their logos.
- * Responds with a list of logos or appropriate error messages.
+ * Responds with a list of logos.
  */
 async function searchLogoController(req, res, next) {
   try {
@@ -46,7 +46,6 @@ async function searchLogoController(req, res, next) {
       });
     }
     const { API_KEY, companyNameBeginsWith } = value;
-
     const key = await keyService.getApiKey(API_KEY);
     if (!key) {
       return res.status(403).json({
@@ -77,6 +76,7 @@ async function searchLogoController(req, res, next) {
 
     const dataList = await imageServices.getDataList(companyList);
     await subscriptionService.incrementUsageCount(subscription);
+    
     return res.status(200).json({
       statusCode: 200,
       data: dataList,

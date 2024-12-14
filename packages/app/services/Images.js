@@ -81,7 +81,7 @@ class ImageServices {
     return `${process.env.KEY}/${extension}/${imageName}`;
   }
 
-  async createImageData(uploadedBy, imageSize, companyUri, companyName) {
+  async createImageData(uploadedBy, imageSize, companyName, companyUri = " ") {
     const result = await this.imageRepository.create({
       user_id: uploadedBy,
       company_name: companyName,

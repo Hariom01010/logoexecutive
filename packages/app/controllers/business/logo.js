@@ -27,7 +27,6 @@ const getLogoQuerySchema = Joi.object({
 /**
  * Handles requests for fetching a company's logo based on a domain and API key.
  * Validates input, checks subscription limits, fetches the logo, and updates API usage.
- * Responds with the logo URL or appropriate error messages.
  */
 async function getLogoController(req, res, next) {
   try {
@@ -67,7 +66,7 @@ async function getLogoController(req, res, next) {
     await subscriptionService.incrementUsageCount(userSubscription);
     if (!imageUrl) {
       return res.status(404).json({
-        message: "Logo not available",
+        message: "Logo not found",
         statusCode: 404,
         error: STATUS_CODES[404],
       });

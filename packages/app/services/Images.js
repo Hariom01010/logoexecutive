@@ -31,7 +31,7 @@ class ImageServices {
       domainName = image.company_name;
     }
 
-    const imageUrl = `${default_extension}/${domainName}.${default_extension}`;
+    const imageUrl = `${default_extension}/${domainName}`;
     const cloudFrontUrl =
       await this.imageRepository.fetchCloudFrontURL(imageUrl);
     return cloudFrontUrl;
@@ -63,7 +63,7 @@ class ImageServices {
       );
       if (!signedUrl) continue;
       dataList.push({
-        companyName: company.company_name,
+        companyName: company.company_name.split('.')[0],
         image: signedUrl,
       });
     }

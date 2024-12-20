@@ -479,3 +479,18 @@ export const INFO = [
   { title: "Hits", api: 9.2 },
   { title: "Requests", api: -5.3 },
 ];
+
+export const FAQ = [
+  {
+    question: "Why should I use Openlogo?",
+    answer: "Openlogo makes it easy to retrieve logos quickly and reliably with seamless API integration, flexible pricing, and scalable access to a growing logo library. Customize logo sizes and formats to fit your needs effortlessly."
+  },
+  {
+    question: "How do I get started with Openlogo?",
+    answer: "Getting started is easy! Sign up to create your account and generate a unique API key. With your key, explore our API features to retrieve logos in different formats (e.g., PNG, SVG) and sizes tailored to your needs. Use our comprehensive documentation to guide your integration and testing process."
+  },
+    {
+      question: "What payment methods do you support?",
+      answer: "Currently, our plans are in a free trial period, and you can use the API at no cost. We're continuously expanding our library by adding new logos every day. In the future, we plan to introduce a variety of payment methods to suit your convenience."
+    }    
+];

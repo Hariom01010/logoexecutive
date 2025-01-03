@@ -1,3 +1,7 @@
+body.activemodal{
+  overflow: hidden;
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -34,6 +38,7 @@
   align-items: center;
 }
 
+
 .header-hamburger {
   display: none;
 }
@@ -52,6 +57,11 @@
   .header-button {
     display: none;
   }
+
+  .signup-modal{
+    display: none;
+  }
+  
   .header-hamburger {
     display: flex;
     align-items: center;

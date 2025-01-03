@@ -496,6 +496,17 @@ export const INFO = [
   { title: "Requests", api: -5.3 },
 ];
 
+export const PASSWORD_VALIDATION_MESSAGES = {
+  required: "Password is required!",
+  minLength: (minLength) => `Password must be at least ${minLength} characters long.`,
+  maxLength: (maxLength) => `Password must be no more than ${maxLength} characters long.`,
+  uppercase: "Password must contain at least one uppercase letter.",
+  lowercase: "Password must contain at least one lowercase letter.",
+  digit: "Password must contain at least one digit.",
+  specialChar: "Password must contain at least one special character.",
+  generalError: "Password does not meet security requirements.",
+};
+
 export const INTEGRATIONS = [
   { id: 1, src: notion, alt: 'Notion' },
   { id: 2, src: slack, alt: 'Slack' },
@@ -512,13 +523,14 @@ export const INTEGRATIONS = [
   { id: 13, src: g_calendar, alt: 'Google Calendar' },
   { id: 14, src: whatsapp, alt: 'WhatsApp' },
   { id: 15, src: discord, alt: 'Discord' },
-  { id: 16, src: bitbucket, alt: 'Bitbucket' }
+  { id: 16, src: bitbucket, alt: 'Bitbucket' },
 ];
 
 export const ABOUT_TEXT = {
   DESCRIPTION: "From startups to enterprises, our platform offers an extensive collection of company logos, enabling smooth integration and consistent branding.",
-  SUB_DESCRIPTION: "Our APIs are designed to make logo retrieval effortless, providing scalable solutions that adapt to your business's evolving branding requirements."
+  SUB_DESCRIPTION: "Our APIs are designed to make logo retrieval effortless, providing scalable solutions that adapt to your business's evolving branding requirements.",
 };
+
 export const FAQ = [
   {
     question: "Why should I use Openlogo?",

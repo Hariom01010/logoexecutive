@@ -25,7 +25,7 @@ function App() {
           element={
             <ProtectedRoute adminOnly={true}>
               <AdminDashboard />
-            </ProtectedRoute>
+            </ProtectedRoute> 
           }
         />
       </Routes>

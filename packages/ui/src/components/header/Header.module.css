@@ -1,4 +1,4 @@
-body.activemodal{
+body.activemodal {
   overflow: hidden;
 }
 
@@ -7,20 +7,20 @@ body.activemodal{
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 0;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #cccccc;
 }
 
 .header-logo {
   display: flex;
   flex-direction: row;
-  gap: 7px;
+  gap: 8px;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 32px;
 }
 
 .header-items {
   display: flex;
-  color:var(--gray-text);
+  color: var(--gray-text);
   font-weight: 600;
   flex-direction: row;
   gap: 24px;
@@ -37,7 +37,6 @@ body.activemodal{
   flex-direction: row;
   align-items: center;
 }
-
 
 .header-hamburger {
   display: none;
@@ -58,10 +57,10 @@ body.activemodal{
     display: none;
   }
 
-  .signup-modal{
+  .signup-modal {
     display: none;
   }
-  
+
   .header-hamburger {
     display: flex;
     align-items: center;

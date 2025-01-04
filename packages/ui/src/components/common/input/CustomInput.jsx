@@ -15,10 +15,10 @@ function CustomInput({ type, name, label, value, onChange, error, className }) {
         id={label}
         name={name}
         className={`${styles.customInput} ${className}`}
-        value={value} 
+        value={value}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        onChange={onChange} 
+        onChange={onChange}
       />
       <label
         className={`${styles.customInputLabel} ${

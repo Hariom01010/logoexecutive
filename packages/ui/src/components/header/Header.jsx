@@ -1,13 +1,13 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { headerItems } from "../../utils/constants";
 import Button from "../common/button/Button";
 import MobileHeaderMenu from "../MobileHeaderMenu/MobileHeaderMenu";
 import styles from "./Header.module.css";
-import Signup from "../../Pages/signup/Signup";
+import Signup from "../../page/signup/Signup";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [signupModal , setSignupModal] = useState(false)
+  const [signupModal, setSignupModal] = useState(false);
 
   useEffect(() => {
     if (signupModal) {
@@ -45,11 +45,10 @@ const Header = () => {
     setSignupModal(false);
   };
 
-
   return (
     <header className={styles["header-container"]}>
       <div className={styles["header-logo"]}>
-        <img alt="Logo Icon" src="openlogo.svg" width={30} height={30} />
+        <img alt="Logo Icon" src="openlogo.svg" width={36} height={36} />
         <h4>Openlogo</h4>
       </div>
       <div className={styles["header-items"]}>
@@ -60,7 +59,9 @@ const Header = () => {
         ))}
       </div>
       <div className={styles["header-button"]}>
-        <Button variant="primary" onClick={openSignupModal}>Get started for free</Button>
+        <Button variant="primary" onClick={openSignupModal}>
+          Get started for free
+        </Button>
         <Signup isOpen={signupModal} onClose={closeSignupModal} />
       </div>
 

@@ -1,14 +1,13 @@
 .apiContainer {
   background: #4f46e5;
-  padding: 6rem 8rem;
+  padding: 3rem 4rem;
   color: white;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 475px;
-  width: 85vw;
-  border-radius: 10px;
+  width: 85%;
+  border-radius: 12px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -21,30 +20,27 @@
 
 .apiContent h1 {
   font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .apiContent p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.9;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 .searchBox {
   background: white;
-  border-radius: 16px;
-  padding: 1.2rem;
-  width: 375px;
-  min-height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 380px;
+  min-height: 30px;
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   position: relative;
-  margin-right: 50px;
-  margin-top: 70px;
-  min-height: 100px;
+  margin: auto 0;
   max-height: 300px;
   overflow: hidden;
   transition: opacity 0.3s ease-in-out;
@@ -63,37 +59,38 @@
 }
 
 .searchInput {
+  color: #1e293b;
   width: 100%;
-  padding: 8px 35px 8px 12px;
-  border: 1px solid #e2e8f0;
+  padding: 12px;
+  background-color: whitesmoke;
+  border: 2px solid #4754674e;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.3s ease;
 }
 
 .searchInput:focus {
   border-color: #4f46e5;
-  box-shadow: 0 0 0 1px #4f46e5;
 }
 
 .searchButton {
   background: none;
   border: none;
-  padding: 0;
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #94a3b8;
 }
 
 .resultsContainer {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease-in-out, max-height 0.3s;
+  transition:
+    opacity 0.3s ease-in-out,
+    max-height 0.3s;
   margin-top: 0.5rem;
 }
 
@@ -139,15 +136,15 @@
 }
 
 .resultItem img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
   object-fit: contain;
 }
 
 .resultItem span {
   color: #1e293b;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -164,9 +161,7 @@
 .curvedArrow {
   position: absolute;
   bottom: -60px;
-  left: 30%;
-  transform: scale(1.1);
-  pointer-events: none;
+  left: 40%;
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {

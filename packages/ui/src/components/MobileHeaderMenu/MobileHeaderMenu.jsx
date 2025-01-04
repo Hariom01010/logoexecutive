@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { headerItems } from "../../utils/constants";
 import Button from "../common/button/Button";
 import styles from "./MobileHeaderMenu.module.css";
-import Signup from "../../Pages/signup/Signup";
+import Signup from "../../page/signup/Signup";
 import { Link } from "react-router-dom";
 
 const MobileHeaderMenu = () => {
@@ -22,9 +22,9 @@ const MobileHeaderMenu = () => {
         ))}
         <div className={styles["get-started-button"]}>
           <Button variant="secondary" onClick={() => setSignupModal(true)}>
-            Get started 
+            Get started
           </Button>
-           <Signup isOpen={signupModal} onClose={closeSignupModal} />
+          <Signup isOpen={signupModal} onClose={closeSignupModal} />
         </div>
       </div>
     </div>

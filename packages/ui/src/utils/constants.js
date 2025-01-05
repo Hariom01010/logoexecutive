@@ -112,10 +112,15 @@ export const HEADER_ITEMS = [
     url: "/about",
   },
 ];
-export const footerItems = [
+export const FOOTER_ITEMS = [
   {
     name: "home",
     title: "Home",
+    url: "/",
+  },
+  {
+    name: "docs",
+    title: "Docs",
     url: "/",
   },
   {

@@ -88,12 +88,12 @@
 }
 
 .resultsContainer::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--white);
   border-radius: 4px;
 }
 
 .resultsContainer::-webkit-scrollbar-thumb {
-  background: #4f46e5;
+  background: var(--primary);
   border-radius: 4px;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .resultItem:hover {
-  background-color: #f8fafc;
+  background-color: var(--white);
 }
 
 .resultItem img {
@@ -126,7 +126,7 @@
 }
 
 .resultItem span {
-  color: #1e293b;
+  color: var(--description);
   font-size: 1rem;
   font-weight: 500;
 }

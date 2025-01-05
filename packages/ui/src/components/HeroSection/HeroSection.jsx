@@ -17,7 +17,7 @@ const HeroSection = () => {
           <h1>Access hundreds of logos with just one line of code</h1>
           <p>
             A collection of APIs designed to simplify the process of obtaining
-            company logos. Generate API keys in seconds
+            company logos. Generate API keys in seconds.
           </p>
         </div>
         <div className={styles["button-section"]}>

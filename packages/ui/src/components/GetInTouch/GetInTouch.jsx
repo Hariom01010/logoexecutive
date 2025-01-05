@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../common/button/Button";
-import ContactForm from "../ContactForm/ContactForm";
+import ContactForm from "./ContactForm";
 import styles from "./GetInTouch.module.css";
 
 function GetInTouch() {

@@ -9,13 +9,10 @@ const PrivacyPolicy = () => {
       <section>
         <h2 className={styles.heading}>Openlogo Terms of Services</h2>
         <p className={styles.text}>
-          Thank you for choosing OpenLogo! We&apos;re excited to have you on
-          board. Before you begin using OpenLogo, please take a moment to review
-          our Terms of Service carefully. As this agreement is a crucial
-          contract between us and our users, we&apos;ve made every effort to
-          present it clearly. To make it more convenient for you, we&apos;ve
-          provided a concise, non-binding summary followed by the complete legal
-          terms.
+          Thank you for choosing OpenLogo! Before using our services, please
+          review our Terms of Service carefully. This agreement is a crucial
+          contract between us and our users. We&apos;ve provided a concise
+          summary followed by the complete legal terms.
         </p>
       </section>
       <br />
@@ -30,12 +27,12 @@ const PrivacyPolicy = () => {
         </p>
         <p className={styles.text}>
           Openlogo collects personal information such as your name, email
-          address, and other details when you register for an account or make
-          use of specific features on our platform. We also gather usage data
-          about how you interact with our website and services, including pages
-          viewed, features used, and your activity within our platform. If you
-          contact us for support or inquiries, we may collect the content of
-          those communications.
+          address, and other details when you register for an account or use
+          specific features on our platform. We also gather usage data about how
+          you interact with our website and services, including pages viewed,
+          features used, and your activity within our platform. If you contact
+          us for support or inquiries, we may collect the content of those
+          communications.
         </p>
         <p className={styles.text}>
           The information collected is used to provide and enhance our services,

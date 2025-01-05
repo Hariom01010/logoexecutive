@@ -62,11 +62,13 @@
   outline: none;
   resize: vertical;
   line-height: 1.5;
-  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    border 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   color: var(--description);
 }
 
-h3{
+h3 {
   font-size: 2rem;
   color: var(--black);
 }
@@ -79,11 +81,11 @@ h3{
   color: var(--label-color);
 }
 
-.textArea:focus::placeholder{
+.textArea:focus::placeholder {
   color: var(--primary);
 }
 
-.textArea:focus{
+.textArea:focus {
   border-color: var(--primary);
 }
 

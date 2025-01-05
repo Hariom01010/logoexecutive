@@ -1,9 +1,19 @@
 import styles from "./Button.module.css";
 import { PropTypes } from "prop-types";
 
-const Button = ({ children, variant, onClick = () => {}, disabled = false, className = ""  }) => {
+const Button = ({
+  children,
+  variant,
+  onClick = () => {},
+  disabled = false,
+  className = "",
+}) => {
   return (
-    <button onClick={onClick} disabled={disabled} className={`${styles[variant]} ${className}`}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${styles[variant]} ${className}`}
+    >
       {children}
     </button>
   );

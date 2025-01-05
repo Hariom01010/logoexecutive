@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 import { createContext, useState, useMemo, useCallback } from "react";
 import { instance } from "../api/api_instance";
 
-export const UserContext = createContext();
-
 export function UserProvider({ children }) {
+  const UserContext = createContext();
   const [userData, setUserData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();

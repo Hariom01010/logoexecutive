@@ -14,7 +14,7 @@ function ProtectedRoute({ adminOnly, children }) {
     if (adminOnly && isAuthenticated && (loading || !userData)) {
       fetchUserData();
     }
-  }, []);
+  }, [adminOnly, fetchUserData, isAuthenticated, loading, userData]);
 
   if (adminOnly && isAuthenticated && (loading || !userData)) {
     return <Spinner />;

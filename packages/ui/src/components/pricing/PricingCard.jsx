@@ -5,7 +5,7 @@ import styles from "./PricingCard.module.css";
 
 function PricingCard({ name, tagline, index, keypoints }) {
   const buttonText = index === 1 ? "Coming Soon" : "Get Started";
-  const isDisabled = index === 1 ? true: false;
+  const isDisabled = index === 1 ? true : false;
 
   return (
     <div className={styles.cardMainDiv}>
@@ -22,7 +22,13 @@ function PricingCard({ name, tagline, index, keypoints }) {
             </div>
           ))}
         </div>
-        <Button variant={"primary"} className={styles.width} disabled={isDisabled}>{buttonText}</Button>
+        <Button
+          variant={"primary"}
+          className={styles.width}
+          disabled={isDisabled}
+        >
+          {buttonText}
+        </Button>
       </div>
     </div>
   );

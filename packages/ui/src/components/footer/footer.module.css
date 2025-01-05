@@ -30,11 +30,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.footer-item:hover{
+.footer-item:hover {
   color: var(--primary);
 }
 
-.footer-copyright, .footer-powered {
+.footer-copyright,
+.footer-powered {
   color: var(--description);
   font-size: 1rem;
   text-decoration: none;

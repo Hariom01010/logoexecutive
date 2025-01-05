@@ -18,8 +18,8 @@ function GetInTouch() {
         </div>
         <h2 className={styles.title}>Still have questions?</h2>
         <p className={styles.description}>
-          Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly
-          team.
+          Can&apos;t find the answer you&apos;re looking for? Please chat to our
+          friendly team.
         </p>
         <Button
           onClick={openModal}

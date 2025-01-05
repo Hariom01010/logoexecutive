@@ -26,7 +26,11 @@ const HeroSection = () => {
               <span>Documentation</span>
             </div>
           </Button>
-          <Button type="button" variant="primary" onClick={() => setSignupModal(true)}>
+          <Button
+            type="button"
+            variant="primary"
+            onClick={() => setSignupModal(true)}
+          >
             Get started
           </Button>
           <Signup isOpen={signupModal} onClose={closeSignupModal} />

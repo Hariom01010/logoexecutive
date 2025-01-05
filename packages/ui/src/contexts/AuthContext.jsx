@@ -8,9 +8,8 @@ import {
 } from "react";
 import { instance } from "../api/api_instance";
 
-export const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
+  const AuthContext = createContext();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isAuthCheckComplete, setIsAuthCheckComplete] = useState(false);
 

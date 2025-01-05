@@ -16,7 +16,7 @@
   --description: rgb(75, 85, 99);
   --border: 2px solid rgb(177, 179, 183);
   --label-color: rgb(134, 137, 139);
-  --input-color:var(--description);
+  --input-color: var(--description);
   --bradius: 6px;
   --shadow: rgba(140, 152, 164, 0.125) 0px 6px 24px 0px;
   --table-heading-bg: rgb(226, 224, 224);

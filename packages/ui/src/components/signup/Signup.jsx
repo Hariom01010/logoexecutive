@@ -4,16 +4,19 @@ import PropTypes from "prop-types";
 import Modal from "../common/modal/Modal";
 import { isValidEmail, isValidPassword } from "../../utils/helpers";
 import CustomInput from "../common/input/CustomInput";
-import Button from "../common/button/Button"
+import Button from "../common/button/Button";
 import styles from "./Signup.module.css";
 
 function Signup({ isOpen, onClose }) {
-  const initialValues = useMemo(() => ({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  }), []);
+  const initialValues = useMemo(
+    () => ({
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    }),
+    [],
+  );
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -163,12 +166,16 @@ function Signup({ isOpen, onClose }) {
             required={true}
           />
           <div className={styles.inputGroup}>
-            <Button type="submit" variant="primary" className={styles.signbutton}>Sign up</Button>
+            <Button
+              type="submit"
+              variant="primary"
+              className={styles.signbutton}
+            >
+              Sign up
+            </Button>
           </div>
         </form>
-        <p className={styles.inputActiontext}>
-            Already have an account ?
-          </p>
+        <p className={styles.inputActiontext}>Already have an account ?</p>
       </div>
     </Modal>
   );

@@ -34,7 +34,8 @@
   border-radius: 50%;
 }
 
-.leftCircle, .rightCircle{
+.leftCircle,
+.rightCircle {
   width: 3rem;
   height: 3rem;
   z-index: 1;

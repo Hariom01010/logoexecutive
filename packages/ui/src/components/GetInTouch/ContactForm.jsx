@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import CustomInput from "../common/input/CustomInput";
-import Button from "../common/button/Button"; 
+import Button from "../common/button/Button";
 import styles from "./ContactForm.module.css";
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -108,7 +108,7 @@ function ContactForm({ closeModal }) {
               label="Name"
               onChange={handleInputChange}
               className={`${styles.inputField} ${errors.name ? styles.invalid : ""}`}
-             />
+            />
           </div>
           <div className={styles.formGroup}>
             <CustomInput
@@ -118,7 +118,7 @@ function ContactForm({ closeModal }) {
               label="Email"
               onChange={handleInputChange}
               className={`${styles.inputField} ${errors.email ? styles.invalid : ""}`}
-             />
+            />
           </div>
           <div className={styles.formGroup}>
             <textarea
@@ -131,7 +131,11 @@ function ContactForm({ closeModal }) {
             ></textarea>
           </div>
           <div className={styles.buttonContainer}>
-            <Button type="submit" variant="primary" className={styles.submitButton}>
+            <Button
+              type="submit"
+              variant="primary"
+              className={styles.submitButton}
+            >
               Send Message
             </Button>
           </div>

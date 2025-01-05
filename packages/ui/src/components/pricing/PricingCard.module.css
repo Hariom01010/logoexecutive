@@ -17,11 +17,11 @@
   gap: 1rem;
 }
 
-.cardSubDiv h1{
+.cardSubDiv h1 {
   color: var(--black);
 }
 
-.cardSubDiv h3{
+.cardSubDiv h3 {
   color: var(--description);
 }
 
@@ -57,7 +57,7 @@
   gap: 1rem;
 }
 
-.width{
+.width {
   width: 90%;
   margin-bottom: 1rem;
 }

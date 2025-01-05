@@ -1,19 +1,12 @@
-import React, { useState } from "react";
-import styles from "./GetInTouch.module.css";
+import { useState } from "react";
+import Button from "../common/button/Button";
 import ContactForm from "../ContactForm/ContactForm";
+import styles from "./GetInTouch.module.css";
 
 function GetInTouch() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      openModal();
-    }
-  };
 
   return (
     <div className={styles.wrapper}>
@@ -25,17 +18,16 @@ function GetInTouch() {
         </div>
         <h2 className={styles.title}>Still have questions?</h2>
         <p className={styles.description}>
-          Can't find the answer you're looking for? Please chat to our friendly
+          Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly
           team.
         </p>
-        <button
+        <Button
           onClick={openModal}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
+          variant="primary"
           className={styles.getInTouchBtn}
         >
           Get in touch
-        </button>
+        </Button>
       </div>
 
       {isModalOpen && (

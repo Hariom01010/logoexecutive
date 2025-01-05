@@ -6,7 +6,7 @@
 
 .customInput {
   color: var(--input-color);
-  background: white;
+  background: var(--white);
   padding: 12px;
   font-size: 1rem;
   width: 100%;

@@ -1,11 +1,10 @@
 import { useState } from "react";
 import Button from "../common/button/Button";
 import styles from "./HeroSection.module.css";
-import Signup from "../../page/signup/Signup";
+import Signup from "../signup/Signup";
 
 const HeroSection = () => {
   const [signupModal, setSignupModal] = useState(false);
-
   const closeSignupModal = () => {
     setSignupModal(false);
   };

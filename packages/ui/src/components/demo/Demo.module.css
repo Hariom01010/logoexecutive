@@ -1,7 +1,7 @@
 .apiContainer {
-  background: #4f46e5;
+  background: var(--primary);
   padding: 3rem 4rem;
-  color: white;
+  color: var(--white);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -20,22 +20,21 @@
 
 .apiContent h1 {
   font-size: 3rem;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .apiContent p {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.2rem;
+  line-height: 1.6;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .searchBox {
-  background: white;
+  background: var(--white);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   width: 380px;
-  min-height: 30px;
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
@@ -58,27 +57,11 @@
   transition: margin 0.3s ease-in-out;
 }
 
-.searchInput {
-  color: #1e293b;
-  width: 100%;
-  padding: 12px;
-  background-color: whitesmoke;
-  border: 2px solid #4754674e;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.searchInput:focus {
-  border-color: #4f46e5;
-}
-
 .searchButton {
   background: none;
   border: none;
   position: absolute;
-  right: 10px;
+  right: -1rem;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -136,9 +119,9 @@
 }
 
 .resultItem img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 15px;
   object-fit: contain;
 }
 

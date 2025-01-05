@@ -1,6 +1,9 @@
 import { useState } from "react";
-import styles from "./Demo.module.css";
 import { SVGS, COMPANIES } from "../../utils/constants";
+import CustomInput from "../common/input/CustomInput";
+import styles from "./Demo.module.css";
+
+
 const Demo = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showResults, setShowResults] = useState(false);
@@ -39,13 +42,13 @@ const Demo = () => {
             onSubmit={handleSearch}
             className={`${styles.searchInputContainer} ${showResults ? styles.hasResults : ""}`}
           >
-            <input
+            <CustomInput
+              name="search"
+              label="search"
               type="text"
-              placeholder="Search"
-              className={styles.searchInput}
               value={searchTerm}
               onChange={handleInputChange}
-            />
+             />
             <button type="submit" className={styles.searchButton}>
               <img src={SVGS.searchIcon} height={24} width={24} alt="Search" />
             </button>

@@ -558,7 +558,7 @@ const PLANS = [
     index: 0,
     name: "HOBBY",
     pricing: 0,
-    tagline: "Ideal for small teams and startups.",
+    tagline: "Try for free for individuals",
     keypoints: [
       "Fortune 500 company logo",
       "500 API calls per month",
@@ -571,9 +571,9 @@ const PLANS = [
     index: 1,
     name: "PRO",
     pricing: 1500,
-    tagline: "Growing teams up to 20 users.",
+    tagline: "Grow with pro plan.",
     keypoints: [
-      "Fortune 500 company logo + private images",
+      "Hobby plan plus",
       "10000 API calls per month",
       "5 API keys",
       "Advance analytics",

@@ -39,7 +39,7 @@ CustomInput.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default CustomInput;

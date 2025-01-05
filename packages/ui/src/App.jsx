@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
 import AdminDashboard from "./page/admin/Admin";
@@ -9,7 +8,7 @@ import Dashboard from "./page/dashboard/Dashboard";
 import Footer from "./components/footer/Footer";
 import PrivacyPolicy from "./page/privacypolicy/PrivacyPolicy";
 import SettingsPage from "./components/settingsPage/SettingsPage";
-import Analytics from "./components/analytics/Analytics";
+// import Analytics from "./components/analytics/Analytics";
 import "./App.css";
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/profile" element={<SettingsPage />} />
-        <Route path="/analytics" element={<Analytics />} />
+        {/* <Route path="/analytics" element={<Analytics />} /> */}
         <Route
           path="/admin"
           element={

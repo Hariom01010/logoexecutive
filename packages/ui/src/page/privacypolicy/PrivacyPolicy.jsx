@@ -2,11 +2,7 @@ import styles from "./PrivacyPolicy.module.css";
 
 const PrivacyPolicy = () => {
   return (
-    <div
-      className={styles.privacyPolicy}
-      style={{ padding: "20px", lineHeight: "1.6" }}
-    >
-      <section>
+    <div className={styles.container}>
         <h2 className={styles.heading}>Openlogo Terms of Services</h2>
         <p className={styles.text}>
           Thank you for choosing OpenLogo! Before using our services, please
@@ -14,9 +10,7 @@ const PrivacyPolicy = () => {
           contract between us and our users. We&apos;ve provided a concise
           summary followed by the complete legal terms.
         </p>
-      </section>
       <br />
-      <section>
         <h2 className={styles.heading}>Privacy Policy</h2>
         <p className={styles.text}>
           This Privacy Policy explains how Openlogo collects, uses, and protects
@@ -75,9 +69,7 @@ const PrivacyPolicy = () => {
           to stay informed about how we are protecting your personal
           information.
         </p>
-      </section>
       <br />
-      <section>
         <h2 className={styles.heading}>Terms and Conditions</h2>
         <p className={styles.text}>
           By using Openlogo&apos;s website and services, you agree to comply
@@ -117,7 +109,6 @@ const PrivacyPolicy = () => {
           Conditions, please contact us through our contact page. We are here to
           help you understand and navigate our policies.
         </p>
-      </section>
       <br />
     </div>
   );

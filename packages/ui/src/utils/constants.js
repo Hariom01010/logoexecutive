@@ -85,11 +85,11 @@ export const featureItems = [
   },
 ];
 
-export const headerItems = [
+export const HEADER_ITEMS = [
   {
-    name: "demo",
-    title: "Demo",
-    url: "/demo",
+    name: "home",
+    title: "Home",
+    url: "/",
   },
   {
     name: "docs",

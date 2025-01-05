@@ -6,30 +6,42 @@ body.activemodal {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 20px 0;
-  border-bottom: 1px solid #cccccc;
+  padding: 1.2rem 0;
+  border-bottom: var(--border);
 }
 
 .header-logo {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
-  font-size: 32px;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .header-items {
+  font-size: 1rem;
   display: flex;
-  color: var(--gray-text);
+  color: var(--description);
   font-weight: 600;
   flex-direction: row;
-  gap: 24px;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .header-item {
   text-decoration: none;
   color: unset;
+}
+
+.header-item:hover{
+  color: var(--primary);
+  transition: all 0.3s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  transition: all 0.3s ease-in-out;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .header-button {

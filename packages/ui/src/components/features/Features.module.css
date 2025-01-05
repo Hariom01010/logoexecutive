@@ -1,6 +1,5 @@
 .features-container {
   margin: 1rem 2rem;
-  font-family: Inter, sans-serif;
   padding: 2rem 5rem;
 }
 
@@ -10,7 +9,7 @@
 }
 
 .features-container-head > h2 {
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
   color: var(--black);
   font-size: 3rem;
 }

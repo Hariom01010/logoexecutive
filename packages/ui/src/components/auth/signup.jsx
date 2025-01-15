@@ -6,6 +6,13 @@ import PropTypes from "prop-types";
 import { isValidEmail, isValidPassword } from "../../utils/helpers";
 import axios from "axios";
 
+const SIGN_UP_FIELDS = [
+  { type: "text", name: "name", label: "Name" },
+  { type: "email", name: "email", label: "Email" },
+  { type: "password", name: "password", label: "Password" },
+  { type: "password", name: "confirmPassword", label: "Confirm Password" },
+];
+
 function SignUpForm({ toggleForm, onClose }) {
   const initialValues = useMemo(
     () => ({
@@ -20,8 +27,6 @@ function SignUpForm({ toggleForm, onClose }) {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +39,6 @@ function SignUpForm({ toggleForm, onClose }) {
   const resetForm = useCallback(() => {
     setFormValues(initialValues);
     setFormErrors({});
-    setErrorMessage("");
-    setSuccessMessage("");
     setIsSubmit(false);
   }, [initialValues]);
 
@@ -72,25 +75,15 @@ function SignUpForm({ toggleForm, onClose }) {
     e.preventDefault();
     const errors = validate(formValues);
     setFormErrors(errors);
-    setErrorMessage(Object.values(errors)[0] || "");
 
     if (Object.keys(errors).length === 0) {
       setIsSubmit(true);
-      try {
-        const response = await axios.post("/api/auth/signup", formValues);
-
-        if (response.status === 200) {
-          setSuccessMessage("Signed up successfully");
-          setTimeout(() => {
-            resetForm();
-            toggleForm();
-          }, 1500);
-        }
-      } catch (error) {
-        setErrorMessage(
-          error.response?.data?.message || "An error occurred during signup",
-        );
-        setIsSubmit(false);
+      const response = await axios.post("/api/auth/signup", formValues);
+      if (response.status === 200) {
+        setTimeout(() => {
+          resetForm();
+          toggleForm();
+        }, 1500);
       }
     }
   };
@@ -105,52 +98,18 @@ function SignUpForm({ toggleForm, onClose }) {
     <div className={styles.pageDiv}>
       <form noValidate className={styles.form} onSubmit={handleSubmit}>
         <h2 className={styles.title}>Sign up for free</h2>
-
-        {successMessage && (
-          <p className={styles.successMessage}>{successMessage}</p>
-        )}
-        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
-
-        <CustomInput
-          type="text"
-          name="name"
-          label="Name"
-          className={styles.input}
-          value={formValues.name}
-          onChange={handleChange}
-          required
-        />
-
-        <CustomInput
-          type="email"
-          name="email"
-          label="Email"
-          className={styles.input}
-          value={formValues.email}
-          onChange={handleChange}
-          required
-        />
-
-        <CustomInput
-          type="password"
-          name="password"
-          label="Password"
-          className={styles.input}
-          value={formValues.password}
-          onChange={handleChange}
-          required
-        />
-
-        <CustomInput
-          type="password"
-          name="confirmPassword"
-          label="Confirm Password"
-          className={styles.input}
-          value={formValues.confirmPassword}
-          onChange={handleChange}
-          required
-        />
-
+        {SIGN_UP_FIELDS.map((field) => (
+          <CustomInput
+            key={field.name}
+            type={field.type}
+            name={field.name}
+            label={field.label}
+            value={formValues[field.name]}
+            onChange={handleChange}
+            className={styles.input}
+            required
+          />
+        ))}
         <div className={styles.inputGroup}>
           <Button type="submit" variant="primary" className={styles.signbutton}>
             Sign up

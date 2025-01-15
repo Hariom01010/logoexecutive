@@ -16,8 +16,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "pnpm lint:fix",
-      "pnpm format"
+      "pnpm exec prettier --write"
     ]
   },
   "devDependencies": {

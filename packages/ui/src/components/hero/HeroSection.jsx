@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../common/button/Button";
 import styles from "./HeroSection.module.css";
 import AuthModal from "../auth/Auth";

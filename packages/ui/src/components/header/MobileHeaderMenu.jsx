@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HEADER_ITEMS } from "../../utils/constants";
 import Button from "../common/button/Button";
 import styles from "./MobileHeaderMenu.module.css";

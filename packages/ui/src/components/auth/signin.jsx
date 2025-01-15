@@ -1,9 +1,14 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import PropTypes from "prop-types";
 import CustomInput from "../common/input/CustomInput";
 import Button from "../common/button/Button";
 import styles from "./SignForm.module.css";
 import { isValidEmail, isValidPassword } from "../../utils/helpers";
+
+const SIGN_IN_FIELDS = [
+  { type: "email", name: "email", label: "Email" },
+  { type: "password", name: "password", label: "Password" },
+];
 
 const SignInForm = ({ toggleForm, onClose }) => {
   const initialValues = { email: "", password: "" };
@@ -29,7 +34,7 @@ const SignInForm = ({ toggleForm, onClose }) => {
       });
       return;
     }
-
+    console.log(feedbackMessage);
     setFeedbackMessage({ type: "success", message: "Signed in successfully!" });
 
     setTimeout(() => {
@@ -63,39 +68,23 @@ const SignInForm = ({ toggleForm, onClose }) => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.logoWrapperBack}>
-        <img src="/logo-images.png" alt="Logo" className={styles.logo} />
+        <img src="/logo-images.png" alt="openlogo" className={styles.logo} />
       </div>
       <div className={styles.signintitle}>
         <h2 className={styles.title}>Go to dashboard</h2>
       </div>
-      {feedbackMessage.message && (
-        <p
-          className={
-            feedbackMessage.type === "success"
-              ? styles.successMessage
-              : styles.errorMessage
-          }
-        >
-          {feedbackMessage.message}
-        </p>
-      )}
       <div className={styles.cusomeinputcss}>
-        <CustomInput
-          type="email"
-          name="email"
-          label="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className={styles.input}
-        />
-        <CustomInput
-          type="password"
-          name="password"
-          label="Password"
-          value={formData.password}
-          onChange={handleChange}
-          className={styles.input}
-        />
+        {SIGN_IN_FIELDS.map((field) => (
+          <CustomInput
+            key={field.name}
+            type={field.type}
+            name={field.name}
+            label={field.label}
+            value={formData[field.name]}
+            onChange={handleChange}
+            className={styles.input}
+          />
+        ))}
       </div>
       <p className={styles.forgotPassword}>Forgot Password?</p>
       <div className={styles.inputGroup}>

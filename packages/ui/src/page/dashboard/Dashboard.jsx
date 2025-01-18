@@ -1,7 +1,7 @@
-import ApiKeyForm from "../../components/dashboard/ApiKeyForm";
-import CurrentPlan from "../../components/dashboard/CurrentPlan/CurrentPlan";
-import Usage from "../../components/dashboard/Usage/Usage";
-import ChangePassword from "../../components/dashboard/ChangePassword/ChangePassword";
+import ApiKeyForm from "../../components/dashboard/apikeyform/ApiKeyForm";
+import CurrentPlan from "../../components/dashboard/currentplan/CurrentPlan";
+import Usage from "../../components/dashboard/usage/Usage";
+import ChangePassword from "../../components/dashboard/changePassword/ChangePassword";
 import styles from "./Dashboard.module.css";
 
 function Dashboard() {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import CustomInput from "../common/input/CustomInput";
 import Button from "../common/button/Button";
 import styles from "./SignForm.module.css";
-import { isValidEmail, isValidPassword } from "../../utils/helpers";
+import { isValidEmail, isValidPassword } from "../../utils/Helpers";
 
 const SIGN_IN_FIELDS = [
   { type: "email", name: "email", label: "Email" },

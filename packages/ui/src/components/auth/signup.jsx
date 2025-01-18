@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback, useMemo } from "react";
 import CustomInput from "../common/input/CustomInput";
 import Button from "../common/button/Button";
 import PropTypes from "prop-types";
-import { isValidEmail, isValidPassword } from "../../utils/helpers";
+import { isValidEmail, isValidPassword } from "../../utils/Helpers";
 import styles from "./SignForm.module.css";
 
 const SIGN_UP_FIELDS = [

@@ -1,5 +1,5 @@
-import CustomInput from "../../common/input/CustomInput";
-import Button from "../../common/button/Button";
+import CustomInput from "../common/input/CustomInput";
+import Button from "../common/button/Button";
 import styles from "./ApiKeyForm.module.css";
 
 function ApiKeyForm() {

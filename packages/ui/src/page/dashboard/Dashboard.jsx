@@ -1,4 +1,4 @@
-import ApiKeyForm from "../../components/dashboard/ApiKeyForm/ApiKeyForm";
+import ApiKeyForm from "../../components/dashboard/ApiKeyForm";
 import CurrentPlan from "../../components/dashboard/CurrentPlan/CurrentPlan";
 import Usage from "../../components/dashboard/Usage/Usage";
 import ChangePassword from "../../components/dashboard/ChangePassword/ChangePassword";

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HEADER_ITEMS } from "../../utils/constants";
+import { HEADER_ITEMS } from "../../utils/Constants";
 import Button from "../common/button/Button";
 import styles from "./MobileHeaderMenu.module.css";
 import AuthModal from "../auth/Auth";

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MobileHeaderMenu from "./MobileHeaderMenu";
 import AuthModal from "../auth/Auth";
 import Button from "../common/button/Button";
-import { HEADER_ITEMS } from "../../utils/constants";
+import { HEADER_ITEMS } from "../../utils/Constants";
 import styles from "./Header.module.css";
 
 const Header = () => {

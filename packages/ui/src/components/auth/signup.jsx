@@ -1,10 +1,9 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import CustomInput from "../common/input/CustomInput";
-import styles from "./SignForm.module.css";
 import Button from "../common/button/Button";
 import PropTypes from "prop-types";
 import { isValidEmail, isValidPassword } from "../../utils/helpers";
-import axios from "axios";
+import styles from "./SignForm.module.css";
 
 const SIGN_UP_FIELDS = [
   { type: "text", name: "name", label: "Name" },
@@ -74,18 +73,7 @@ function SignUpForm({ toggleForm, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const errors = validate(formValues);
-    setFormErrors(errors);
-
-    if (Object.keys(errors).length === 0) {
-      setIsSubmit(true);
-      const response = await axios.post("/api/auth/signup", formValues);
-      if (response.status === 200) {
-        setTimeout(() => {
-          resetForm();
-          toggleForm();
-        }, 1500);
-      }
-    }
+    console.log(errors);
   };
 
   useEffect(() => {

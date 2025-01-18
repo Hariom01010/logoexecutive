@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import SignUpForm from "./signup";
-import SignInForm from "./signin";
+import SignUpForm from "./Signup";
+import SignInForm from "./Signin";
 import styles from "./Auth.module.css";
 
 const AuthModal = ({ isOpen, onClose }) => {

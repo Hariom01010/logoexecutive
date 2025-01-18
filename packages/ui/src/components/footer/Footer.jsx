@@ -1,4 +1,4 @@
-import { FOOTER_ITEMS } from "../../utils/constants";
+import { FOOTER_ITEMS } from "../../utils/Constants";
 import styles from "./footer.module.css";
 
 function Footer() {

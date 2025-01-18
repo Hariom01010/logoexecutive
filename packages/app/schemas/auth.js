@@ -64,12 +64,6 @@ const forgotPasswordSchema = Joi.object().keys({
     }),
 });
 
-const payloadSchema = Joi.object().keys({
-  token: Joi.string().trim().required().messages({
-    "any.required": "Token is required",
-  }),
-});
-
 const patchSchema = Joi.object().keys({
   newPassword: Joi.string().trim().min(8).max(30).required().messages({
     "any.required": "New password is required",
@@ -93,6 +87,5 @@ module.exports = {
   signinPayloadSchema,
   signupPayloadSchema,
   forgotPasswordSchema,
-  payloadSchema,
   patchSchema,
 };

@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const { STATUS_CODES } = require("http");
 const UserTokenService = require("./../../services/UserToken");
 const UserService = require("./../../services/User");
-const { payloadSchema, patchSchema } = require("../../schemas/auth");
+const { patchSchema } = require("../../schemas/auth");
 
 /**
  * This controller validates the query parameters, retrieves the user token, checks its validity,
@@ -12,7 +12,7 @@ const { payloadSchema, patchSchema } = require("../../schemas/auth");
 async function get(req, res, next) {
   try {
     const userTokenService = new UserTokenService();
-    const { error, value } = payloadSchema.validate(req.query);
+    const { token } = req.params;
     if (error)
       return res.status(422).json({
         error: STATUS_CODES[422],

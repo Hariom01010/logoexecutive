@@ -33,7 +33,11 @@ app.disable("x-powered-by");
 app.use(express.json());
 app.use("/api/", routes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  logger.info(`Server is running on port ${PORT}..`);
-});
+if (process.env.NODE_ENV !== "test") {
+  const PORT = process.env.PORT;
+  app.listen(PORT, () => {
+    logger.info(`Server is running on http://localhost:${PORT}..`);
+  });
+}
+
+module.exports = app;

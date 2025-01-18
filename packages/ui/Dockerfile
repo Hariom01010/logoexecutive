@@ -4,7 +4,7 @@ WORKDIR /ui
 
 RUN npm install -g pnpm
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN pnpm install 
 

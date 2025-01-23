@@ -118,6 +118,14 @@ function Signup({ isOpen, onClose }) {
     onClose();
   };
 
+  const guestSignIn = async () => {
+    try{
+      await axios.get("http://localhost:5000/api/auth/guest-signin")
+    } catch (error){
+      console.log(error)
+    }
+  }
+
   return (
     <Modal isOpen={isOpen} onClose={handleClose} size="medium">
       <div className={styles.pageDiv}>
@@ -176,6 +184,7 @@ function Signup({ isOpen, onClose }) {
           </div>
         </form>
         <p className={styles.inputActiontext}>Already have an account ?</p>
+        <p className={styles.inputActiontext} onClick={guestSignIn}>Continue as a guest</p>
       </div>
     </Modal>
   );

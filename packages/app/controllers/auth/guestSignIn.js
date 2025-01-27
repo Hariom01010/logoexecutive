@@ -5,7 +5,7 @@ async function guestSignInController(req, res, next) {
     try{
         const userService = new UserService();
 
-        const user = await userService.getUserByEmail('test@gmail.com')
+        const user = await userService.getUserByEmail(process.env.GUEST_EMAIL)
 
         if(user){
             res.cookie('jwt', user.generateJWT(), {

@@ -120,6 +120,15 @@ function SignUpForm({ toggleForm, onClose }) {
           Already have an account?
         </span>
 
+        <span 
+          role="button"
+          tabIndex={0}
+          className={styles.inputActiontext}
+          style={{cursor: "pointer"}}
+          >
+            Continue as guest
+          </span>
+
         <button onClick={onClose} className={styles.closeButton}>
           ×
         </button>

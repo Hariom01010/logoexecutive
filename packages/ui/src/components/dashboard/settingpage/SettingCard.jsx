@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./SettingCard.module.css";
 import Button from "../../common/button/Button";
-import { SETTING } from "../../../utils/constants";
+import { SETTING } from "../../../utils/Constants";
 
 function SettingCard() {
   return (

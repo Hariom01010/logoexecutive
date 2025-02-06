@@ -91,6 +91,9 @@ const SignInForm = ({ toggleForm, onClose }) => {
         <Button type="submit" variant="primary" className={styles.signbutton}>
           Sign In
         </Button>
+        <Button type="submit" variant="secondary" className={styles.continueasguest}>
+          Continue as Guest
+        </Button>
       </div>
       <hr className={styles.horizontalLine} />
 
@@ -108,15 +111,6 @@ const SignInForm = ({ toggleForm, onClose }) => {
         style={{ cursor: "pointer" }}
       >
         Don&apos;t have an account?
-      </span>
-      
-      <span
-        role="button"
-        tabIndex={0}
-        className={styles.inputActiontext}
-        style={{cursor: "pointer"}}  
-      >
-        Continue as guest
       </span>
 
       <button onClick={onClose} className={styles.closeButton}>
